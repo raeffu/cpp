@@ -7,7 +7,7 @@
 using namespace std;
 
 int main()
-{
+{ 
   string str;
 
   // output message

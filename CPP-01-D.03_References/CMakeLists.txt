@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
 
 # the 'project' macro is used to name a project
-project(CPP-01-D.00_HelloWorld)
+project(CPP-01-D.03_References)
 
 
 
@@ -11,7 +11,6 @@ project(CPP-01-D.00_HelloWorld)
 set(CMAKE_VERBOSE_MAKEFILE TRUE)
 set(CMAKE_COLOR_MAKEFILE TRUE)
 set(CMAKE_SUPPRESS_REGENERATION TRUE)
-#set(EXECUTABLE_OUTPUT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 set(CMAKE_PREFIX_PATH "${CMAKE_HOME_DIRECTORY}/_LIBS;${CMAKE_PREFIX_PATH}")
 
