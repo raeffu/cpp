@@ -8,13 +8,13 @@ using namespace std;
 int main()
 {
 	// pointer to primitive types
-	int myInt1 = 200;                 // int definition
+	int myInt1 = 200;                  // int definition
 	int myInt2 = 100;                  // int definition
 	int* myIntPointer1;                // int pointer definition
 	int* myIntPointer2;                // int pointer definition
 
 
-	myIntPointer1 = &myInt1;           // address assignment
+	myIntPointer1 = &myInt1;                        // address assignment
 	cout << "Integer: " <<  myInt1 << endl;         // output int value
 	cout << "Address: " <<  &myInt1 << endl;        // output int address (8 digit hex value, e.g.: 0xbffff5c4)
 	cout << "Integer: " << *myIntPointer1 << endl;  // output int value (de-referenced)
@@ -58,7 +58,7 @@ int main()
 	// pointer comparison
 	myIntPointer1 = &myInt1;
 	myIntPointer2 = &myInt2;
-	if (myIntPointer1 < myIntPointer2)
+	if (myIntPointer1 < myIntPointer2) // adressen vergleichen
 	{
 		cout << "Comparison result: " << *myIntPointer1 << " < " << *myIntPointer2 << endl;
 	}
