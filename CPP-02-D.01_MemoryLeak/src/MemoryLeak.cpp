@@ -17,10 +17,12 @@ int main()
         cin.get(); // Get unformatted data from stream, wihtout parameter: Extracts a character from the stream and returns its value (casted to an integer).
 
         // use buffer ...
+        delete[] pbuffer;
+        pbuffer = 0;
     }
 
     // delete buffer
-    delete[] pbuffer;
+    delete[] pbuffer; // gibt nur letzten pbuffer frei. Pointer ändert immer.
 
     cout << "Allocation completed" << endl;
     cin.get();

@@ -3,7 +3,12 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #include <iostream>
-//#include <string.h>
+// std library scope, C
+#include <string.h>
+// C++ include
+//#include <string>
+// project scope
+//#include "string.h"
 
 using namespace std;
 

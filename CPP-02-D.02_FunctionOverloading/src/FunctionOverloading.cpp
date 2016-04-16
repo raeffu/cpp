@@ -8,7 +8,7 @@ using namespace std;
 // typedef declaration
 typedef char* PSTR;
 
-/* Ungültige Funktionsüberladungen - Rückgabewert
+/* UngÃ¼ltige FunktionsÃ¼berladungen - RÃ¼ckgabewert
 int print(char* str)
 {
 	cout << "Print string   : " << str << endl;
@@ -16,14 +16,14 @@ int print(char* str)
 };
 // */
 
-/* Ungültige Funktionsüberladungen - typedef nicht ausreichend
+/* UngÃ¼ltige FunktionsÃ¼berladungen - typedef nicht ausreichend
 void print(PSTR str)
 {
 	cout << "Print typedef string: " << str << endl;
 };
 // */
 
-/* Ungültige Funktionsüberladungen - int& bzw. const int
+/* UngÃ¼ltige FunktionsÃ¼berladungen - int& bzw. const int
 void print( int& value)
 {
 	cout << "Print integer  : " << value << endl;
@@ -31,7 +31,7 @@ void print( int& value)
 // */
 
 
-// Gültige Funktionsüberladung
+// GÃ¼ltige FunktionsÃ¼berladung
 void print(char* str)
 {
 	cout << "Print string   : " << str << endl;

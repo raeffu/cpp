@@ -2,27 +2,50 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.05_StaticMembers/src/StaticMembers.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.05_StaticMembers/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.00_HelloWorld/src/HelloWorld.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.00_HelloWorld/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.05_Arrays/src/Arrays.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.05_Arrays/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.02_Pointers/src/Pointers.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.02_Pointers/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.04_FunctionCalls/src/FunctionCall.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.04_FunctionCalls/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01S_GLDraw2D/src/Geom.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01S_GLDraw2D/src/Draw.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01S_GLDraw2D/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01S_GLDraw2D/inc/Geom.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.01_MemoryLeak/src/MemoryLeak.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.01_MemoryLeak/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/_CMAKE/MACRO_ENSURE_OUT_OF_SOURCE_BUILD.cmake" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/_CMAKE/MACRO_GET_DIRECTORIES.cmake" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.01_MainArguments/src/MainArguments.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.01_MainArguments/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.06_ScopeOperator/src/ScopeOperator.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.06_ScopeOperator/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.03_CopyConstructor/src/CopyConstructor.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.03_CopyConstructor/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.04_FunctionCalls/src/FunctionCall.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.04_FunctionCalls/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.05_Arrays/src/Arrays.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.05_Arrays/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.02_FunctionOverloading/src/FunctionOverloading.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.02_FunctionOverloading/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.03_References/src/References.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.03_References/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.06_ScopeOperator/src/ScopeOperator.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-01-D.06_ScopeOperator/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_CMAKE/FindFLTK.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_CMAKE/MACRO_ENSURE_OUT_OF_SOURCE_BUILD.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_CMAKE/FindGLM.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_CMAKE/FindGLEW.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_CMAKE/MACRO_GET_DIRECTORIES.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CPoint.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CLine.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/Draw.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CCircle.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CRect.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CCircle.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CPoint.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CRect.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CLine.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.04_GlobalInit/src/GlobalInit.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.04_GlobalInit/CMakeLists.txt" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">

@@ -14,10 +14,10 @@ int main()
     int n = 1;                          // lokale Definition 1
     cout << "n=" << n << endl;          // Ausgabe: n=1
 
-    //{
+//    {
 //        int n = 2;                      // lokale Definition 2 (Lokaler Block)
 //        cout << "n=" << n << endl;      // Ausgabe: n=2
-    //}
+//    }
 
     cout << "n=" << n << endl;          // Ausgabe: n=1
     cout << "n=" << ::n << endl;        // Ausgabe: n=0 (Globaler Scope)
