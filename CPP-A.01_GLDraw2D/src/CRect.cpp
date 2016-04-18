@@ -57,7 +57,7 @@ void CRect::list()
     cout << "]" << endl;
 }
 
-int CRect::listCount()
+unsigned long CRect::listCount()
 {
     return ulCount;
 }

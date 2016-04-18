@@ -54,7 +54,7 @@ void CCircle::list()
     cout << "  radius: " << radius << endl << "]" << endl;
 }
 
-int CCircle::listCount()
+unsigned long CCircle::listCount()
 {
     return ulCount;
 }

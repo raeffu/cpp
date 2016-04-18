@@ -11,8 +11,12 @@ using namespace std;
 #include "../inc/CRect.h"
 #include "../inc/CCircle.h"
 
+CPoint p0;
+
 int main()
 {
+    cout << CPoint::listCount();
+    cin.get();
     // static instantiation of objects
     CPoint   P1;
     CLine    L1;

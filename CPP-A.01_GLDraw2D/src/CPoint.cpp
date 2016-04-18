@@ -39,7 +39,7 @@ void CPoint::list()
     cout << "(x: " << x << ", y: " << y << ")" << endl;
 }
 
-int CPoint::listCount()
+unsigned long CPoint::listCount()
 {
     return ulCount;
 }

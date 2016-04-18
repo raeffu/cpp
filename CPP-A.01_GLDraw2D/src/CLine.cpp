@@ -56,7 +56,7 @@ void CLine::list()
     cout << "]" << endl;
 }
 
-int CLine::listCount()
+unsigned long CLine::listCount()
 {
     return ulCount;
 }

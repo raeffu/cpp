@@ -21,7 +21,7 @@ public:
     void set(CPoint, CPoint);
     void set(float x1, float y1, float x2, float y2);
     void list();
-    static int listCount();
+    static unsigned long listCount();
 };
 
 #endif //CPP_CLINE_H

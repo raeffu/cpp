@@ -21,7 +21,7 @@ public:
     void set(CPoint c, float r);
     void set(float x, float y, float r);
     void list();
-    static int listCount();
+    static unsigned long listCount();
 };
 
 #endif //CPP_CCIRCLE_H

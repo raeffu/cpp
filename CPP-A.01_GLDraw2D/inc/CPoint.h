@@ -19,7 +19,7 @@ public:
     ~CPoint();
     void set(float x, float y);
     void list();
-    static int listCount();
+    static unsigned long listCount();
 };
 
 #endif //CPP_CPOINT_H
