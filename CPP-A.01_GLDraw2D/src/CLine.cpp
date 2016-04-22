@@ -12,53 +12,60 @@ unsigned long CLine::ulCount = 0;
 
 CLine::CLine() : p1(), p2()
 {
-    ulCount++;
+  ulCount++;
 }
 
 CLine::CLine(CPoint start, CPoint end) : p1(start), p2(end)
 {
-    ulCount++;
+  ulCount++;
 }
 
 CLine::CLine(float x1, float y1, float x2, float y2) : p1(x1, y1), p2(x2, y2)
 {
-    ulCount++;
+  ulCount++;
 }
 
-CLine::CLine(const CLine &line) : p1(line.p1), p2(line.p2)
+CLine::CLine(const CLine& line) : p1(line.p1), p2(line.p2)
 {
-    ulCount++;
+  ulCount++;
 }
 
 CLine::~CLine()
 {
-    ulCount--;
+  ulCount--;
 }
 
 void CLine::set(CPoint start, CPoint end)
 {
-    p1 = start;
-    p2 = end;
+  p1 = start;
+  p2 = end;
 }
 
 void CLine::set(float x1, float y1, float x2, float y2)
 {
-    p1 = CPoint(x1, y1);
-    p2 = CPoint(x2, y2);
+  p1 = CPoint(x1, y1);
+  p2 = CPoint(x2, y2);
 }
 
 void CLine::list()
 {
-    cout << "[" << endl << "  A: ";
-    p1.list();
-    cout << "  B: ";
-    p2.list();
-    cout << "]" << endl;
+  cout << "[" << endl << "  A: ";
+  p1.list();
+  cout << "  B: ";
+  p2.list();
+  cout << "]" << endl;
 }
 
 unsigned long CLine::listCount()
 {
-    return ulCount;
+  return ulCount;
+}
+
+CLine& CLine::operator=(const CLine& line)
+{
+  p1 = line.p1;
+  p2 = line.p2;
+  return *this;
 }
 
 

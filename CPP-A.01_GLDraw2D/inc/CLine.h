@@ -22,6 +22,8 @@ public:
     void set(float x1, float y1, float x2, float y2);
     void list();
     static unsigned long listCount();
+
+    CLine& operator=(const CLine& line);
 };
 
 #endif //CPP_CLINE_H

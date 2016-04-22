@@ -10,36 +10,42 @@ unsigned long CPoint::ulCount = 0;
 
 CPoint::CPoint(void) : x(0), y(0)
 {
-    ulCount++;
+  ulCount++;
 }
 
 CPoint::CPoint(float x1, float y1) : x(x1), y(y1)
 {
-    ulCount++;
+  ulCount++;
 }
 
 CPoint::CPoint(const CPoint& point) : x(point.x), y(point.y)
 {
-    ulCount++;
+  ulCount++;
 }
 
 CPoint::~CPoint()
 {
-    ulCount--;
+  ulCount--;
 }
 
 void CPoint::set(float x1, float y1)
 {
-    x = x1;
-    y = y1;
+  x = x1;
+  y = y1;
 }
 
 void CPoint::list()
 {
-    cout << "(x: " << x << ", y: " << y << ")" << endl;
+  cout << "(x: " << x << ", y: " << y << ")" << endl;
 }
 
 unsigned long CPoint::listCount()
 {
-    return ulCount;
+  return ulCount;
+}
+
+CPoint* CPoint::test()
+{
+  CPoint* tmp = new CPoint;
+  return tmp;
 }

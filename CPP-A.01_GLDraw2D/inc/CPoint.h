@@ -8,18 +8,20 @@
 class CPoint
 {
 private:
-    float x;
-    float y;
-    static unsigned long ulCount;
+  float x;
+  float y;
+  static unsigned long ulCount;
 
 public:
-    CPoint();
-    CPoint(float x, float y);
-    CPoint(const CPoint& point);
-    ~CPoint();
-    void set(float x, float y);
-    void list();
-    static unsigned long listCount();
+  CPoint();
+  CPoint(float x, float y);
+  CPoint(const CPoint& point);
+  ~CPoint();
+  void set(float x, float y);
+  void list();
+  static unsigned long listCount();
+
+  static CPoint* test();
 };
 
 #endif //CPP_CPOINT_H
