@@ -24,6 +24,7 @@ public:
     static unsigned long listCount();
 
     CLine& operator=(const CLine& line);
+    CLine operator+(const CLine& line);
 };
 
 #endif //CPP_CLINE_H

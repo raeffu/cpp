@@ -44,8 +44,12 @@ unsigned long CPoint::listCount()
   return ulCount;
 }
 
-CPoint* CPoint::test()
+CPoint CPoint::operator+(const CPoint& point)
 {
-  CPoint* tmp = new CPoint;
-  return tmp;
+  return CPoint(x + point.x, y + point.y);
+}
+
+CPoint CPoint::operator-(const CPoint& point)
+{
+  return CPoint(x - point.x, y - point.y);
 }

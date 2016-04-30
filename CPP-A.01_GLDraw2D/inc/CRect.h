@@ -24,6 +24,7 @@ public:
     void set(float x1, float y1, float x2, float y2);
     void list();
     static unsigned long listCount();
+    CRect operator+(const CRect& rect);
 };
 
 #endif //CPP_CRECTANGLE_H

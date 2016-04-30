@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <cmath>
 #include "../inc/CPoint.h"
 #include "../inc/CCircle.h"
 
@@ -57,4 +58,21 @@ void CCircle::list()
 unsigned long CCircle::listCount()
 {
   return ulCount;
+}
+
+CCircle CCircle::operator+(const CCircle& circle)
+{
+  CCircle tmp;
+  // get new radius
+  float deltaX = center.x - circle.center.x;
+  float deltaY = center.y - circle.center.y;
+  float distance = (float) sqrt(pow(deltaX, 2) + pow(deltaY, 2));
+  tmp.radius = (radius + distance + circle.radius) / 2;
+
+  // get new center
+  float centerX = center.x - deltaX;
+  float centerY = center.y - deltaY;
+  tmp.center.set(centerX, centerY);
+
+  return tmp;
 }

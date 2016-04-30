@@ -7,6 +7,11 @@
 
 class CPoint
 {
+
+  friend class CLine;
+  friend class CRect;
+  friend class CCircle;
+
 private:
   float x;
   float y;
@@ -21,7 +26,8 @@ public:
   void list();
   static unsigned long listCount();
 
-  static CPoint* test();
+  CPoint operator+(const CPoint& point);
+  CPoint operator-(const CPoint& point);
 };
 
 #endif //CPP_CPOINT_H

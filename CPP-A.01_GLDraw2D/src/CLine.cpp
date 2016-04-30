@@ -68,4 +68,11 @@ CLine& CLine::operator=(const CLine& line)
   return *this;
 }
 
+CLine CLine::operator+(const CLine& line)
+{
+  CLine tmp;
+  tmp.p1 = p1;
+  tmp.p2 = p2 + (line.p2 - line.p1);
+  return tmp;
+}
 

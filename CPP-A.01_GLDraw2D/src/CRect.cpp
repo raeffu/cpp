@@ -61,3 +61,14 @@ unsigned long CRect::listCount()
 {
     return ulCount;
 }
+
+CRect CRect::operator+(const CRect& rect)
+{
+  CRect tmp;
+  float x1 = min(topLeft.x, rect.topLeft.x);
+  float y1 = max(topLeft.y, rect.topLeft.y);
+  float x2 = max(bottomRight.x, rect.bottomRight.x);
+  float y2 = min(bottomRight.y, rect.bottomRight.y);
+  tmp.set(x1, y1, x2, y2);
+  return tmp;
+}

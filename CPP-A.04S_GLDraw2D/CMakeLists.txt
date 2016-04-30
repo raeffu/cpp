@@ -3,7 +3,7 @@
 cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
 
 # the 'project' macro is used to name a project
-project(CPP-A.04_GLDraw2D)
+project(CPP-A.04S_GLDraw2D)
 
 
 

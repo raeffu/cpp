@@ -1,9 +1,9 @@
-# CMake file for CPP module GLDraw2D project
+# CMake file for CPP module demos
 
 cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)
 
 # the 'project' macro is used to name a project
-project(CPP-A.04_GLDraw2D)
+project(CPP-07-D.01_STLExamples)
 
 
 
@@ -13,19 +13,6 @@ set(CMAKE_COLOR_MAKEFILE TRUE)
 set(CMAKE_SUPPRESS_REGENERATION TRUE)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/bin")
 set(CMAKE_PREFIX_PATH "${CMAKE_HOME_DIRECTORY}/_LIBS;${CMAKE_PREFIX_PATH}")
-
-
-# setup package root directories
-set(GLEW_ROOT_DIR "${CMAKE_HOME_DIRECTORY}/_LIBS/GLEW")
-set(GLM_ROOT_DIR "${CMAKE_HOME_DIRECTORY}/_LIBS/GLM")
-set(FLTK_ROOT_DIR "${CMAKE_HOME_DIRECTORY}/_LIBS/FLTK")
-if(WIN32)
-   if(MSVC)
-      add_definitions(-DGLEW_STATIC)
-      set(CMAKE_EXE_LINKER_FLAGS_RELEASE "/INCREMENTAL:NO ${CMAKE_EXE_LINKER_FLAGS}")
-      set(CMAKE_EXE_LINKER_FLAGS_DEBUG "/DEBUG /NODEFAULTLIB:MSVCRT ${CMAKE_EXE_LINKER_FLAGS}")
-   endif(MSVC)      
-endif(WIN32)
 
 
 if(CMAKE_CONFIGURATION_TYPES)
@@ -69,12 +56,10 @@ if ("${CMAKE_SYSTEM}" MATCHES "Linux.*")
   #Set the binary output path to correspond to windows defaults
   set(EXECUTABLE_OUTPUT_PATH "${EXECUTABLE_OUTPUT_PATH}/${CMAKE_BUILD_TYPE}")
 endif()
-
+ 
 
 # find sources
-file(GLOB SRCS
-    ../_COMMON/src/*.c
-    ../_COMMON/src/*.cpp
+file(GLOB SRCS 
     ./src/*.c
     ./src/*.cpp
 )
@@ -82,73 +67,29 @@ source_group("src" FILES ${SRCS})
 
 
 # find headers (let them show up in the IDEs)
-file(GLOB HDRS
-    ../_COMMON/inc/*.h
-    ../_COMMON/inc/*.hpp
+file(GLOB HDRS 
     ./inc/*.h
     ./inc/*.hpp
 )
 source_group("inc" FILES ${HDRS})
 
 
-# fins GLSL shaders files (let them show up in the IDEs)
-file(GLOB GLSL
-    ./glsl/*.frag
-    ./glsl/*.vert
-    ./glsl/*.geom
-    ./glsl/*.tess
-    ./glsl/*.tecs
-)
-source_group("glsl" FILES ${GLSL})
-
-
 # find packages and libs
-find_package(OpenGL REQUIRED)
-find_package(FLTK REQUIRED)
-find_package(GLEW REQUIRED)
-find_package(GLM REQUIRED)
-
-
-# find framework (specific to OS X)
-if (APPLE)
-	find_library(COCOA_LIBRARY Cocoa)
-elseif()
-	set(COCOA_LIBRARY "")
-endif()
 
 
 # setup package headers
-include_directories(
-    ${OPENGL_INCLUDE_DIR}
-    ${FLTK_INCLUDE_DIRS}
-    ${GLEW_INCLUDE_DIR}
-    ${GLM_INCLUDE_DIRS}
-)
 
 
 # setup debug/release libraries
-set(LIBS_DEBUG)
-foreach(lib; ${OPENGL_LIBRARIES}
-             ${FLTK_LIBRARIES_DEBUG}
-             ${GLEW_LIBRARIES_DEBUG})
-    list(APPEND LIBS_DEBUG debug ${lib})
-endforeach()
+set(LIBS_DEBUG 
+)
 
-set(LIBS_RELEASE)
-foreach(lib; ${OPENGL_LIBRARIES}
-             ${FLTK_LIBRARIES}
-             ${GLEW_LIBRARIES})
-    list(APPEND LIBS_RELEASE optimized ${lib})
-endforeach()
+set(LIBS_RELEASE 
+)
 
-
-# force older GLM versions to use radians instead of degrees
-add_definitions(-DGLM_FORCE_RADIANS)
 
 
 # define target dependencies and build instructions
 set(EXECUTABLE_NAME ${PROJECT_NAME})
-add_executable(${EXECUTABLE_NAME} ${SRCS} ${HDRS} ${GLSL})
-# add framework (specific to OS X)
-target_link_libraries(${EXECUTABLE_NAME} ${LIBS_RELEASE} ${LIBS_DEBUG} ${COCOA_LIBRARY})
-
+add_executable(${EXECUTABLE_NAME} ${SRCS} ${HDRS})
+target_link_libraries(${EXECUTABLE_NAME} ${LIBS_RELEASE} ${LIBS_DEBUG})
