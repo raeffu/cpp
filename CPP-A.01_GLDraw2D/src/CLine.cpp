@@ -6,6 +6,9 @@
 #include "../inc/CPoint.h"
 #include "../inc/CLine.h"
 
+#include <GL/glew.h>
+#include <FL/glut.H>
+
 using namespace std;
 
 unsigned long CLine::ulCount = 0;
@@ -72,7 +75,15 @@ CLine CLine::operator+(const CLine& line)
 {
   CLine tmp;
   tmp.p1 = p1;
-  tmp.p2 = p2 + (line.p2 - line.p1);
+  tmp.p2 = p2 + line.p2 - line.p1;
   return tmp;
+}
+
+void CLine::draw()
+{
+  glBegin(GL_LINES);
+  glVertex2f(p1.x, p1.y);
+  glVertex2f(p2.x, p2.y);
+  glEnd();
 }
 

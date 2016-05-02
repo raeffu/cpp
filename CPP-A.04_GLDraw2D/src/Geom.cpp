@@ -10,8 +10,8 @@ history: 1.00 - initial version of OpenGL drawing application
 
 
 // system includes ////////////////////////////////////////////////////////////
-#include <math.h>
 #include <iostream>
+#include <math.h>
 #include <algorithm>
 using namespace std;
 
@@ -43,9 +43,9 @@ unsigned long CCircle::ulCount = 0;
 CPoint::CPoint(const CPoint& source)
 ///////////////////////////////////////////////////////////////////////////////
 {
-   x = source.x;
-   y = source.y;
-   ulCount++;
+	x = source.x;
+	y = source.y;
+	ulCount++;
 }
 
 
@@ -92,8 +92,8 @@ void CPoint::draw( void )
 CLine::CLine( float x1, float y1, float x2, float y2 )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   set( x1, y1, x2, y2 );
-   ulCount++;
+	set( x1, y1, x2, y2 );
+	ulCount++;
 }
 
 
@@ -105,9 +105,9 @@ CLine::CLine( float x1, float y1, float x2, float y2 )
 CLine::CLine( const CPoint& ptP1, const CPoint& ptP2 )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   _P1 = ptP1;
-   _P2 = ptP2;
-   ulCount++;
+	_P1 = ptP1;
+	_P2 = ptP2;
+	ulCount++;
 }
 
 
@@ -119,9 +119,9 @@ CLine::CLine( const CPoint& ptP1, const CPoint& ptP2 )
 CLine::CLine( const CLine& source )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   _P1 = source._P1;
-   _P2 = source._P2;
-   ulCount++;
+	_P1 = source._P1;
+	_P2 = source._P2;
+	ulCount++;
 }
 
 
@@ -133,9 +133,9 @@ CLine::CLine( const CLine& source )
 CLine& CLine::operator=( const CLine& source )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   _P1 = source._P1;
-   _P2 = source._P2;
-   return *this;
+	_P1 = source._P1;
+	_P2 = source._P2;
+	return *this;
 }
 
 
@@ -147,13 +147,13 @@ CLine& CLine::operator=( const CLine& source )
 CLine CLine::operator+( const CLine& addline )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   // define temporary local object
-   CLine lineTemp;
+	// define temporary local object
+	CLine lineTemp;
 
-   // calculate components of temporary line
-   lineTemp._P1 = _P1;
-   lineTemp._P2 = _P2 + addline._P2 - addline._P1;
-   return lineTemp;
+	// calculate components of temporary line
+	lineTemp._P1 = _P1;
+	lineTemp._P2 = _P2 + addline._P2 - addline._P1;
+	return lineTemp;
 }
 
 
@@ -165,10 +165,10 @@ CLine CLine::operator+( const CLine& addline )
 void CLine::set( float x1, float y1, float x2, float y2 )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   _P1.x = x1;
-   _P1.y = y1;
-   _P2.x = x2;
-   _P2.y = y2;
+	_P1.x = x1;
+	_P1.y = y1;
+	_P2.x = x2;
+	_P2.y = y2;
 }
 
 
@@ -207,8 +207,8 @@ void CLine::draw( void )
 CRect::CRect( float x1, float y1, float x2, float y2 )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   set( x1, y1, x2, y2 );
-   ulCount++;
+	set( x1, y1, x2, y2 );
+	ulCount++;
 }
 
 
@@ -220,9 +220,9 @@ CRect::CRect( float x1, float y1, float x2, float y2 )
 CRect::CRect( const CPoint& ptP1, const CPoint& ptP2 )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   _P1 = ptP1;
-   _P2 = ptP2;
-   ulCount++;
+	_P1 = ptP1;
+	_P2 = ptP2;
+	ulCount++;
 }
 
 
@@ -234,9 +234,9 @@ CRect::CRect( const CPoint& ptP1, const CPoint& ptP2 )
 CRect::CRect( const CRect& source )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   _P1 = source._P1;
-   _P2 = source._P2;
-   ulCount++;
+	_P1 = source._P1;
+	_P2 = source._P2;
+	ulCount++;
 }
 
 
@@ -245,7 +245,7 @@ CRect::CRect( const CRect& source )
 // function: operator+()
 // purpose:  constructs a rectangle object by adding two rectangles
 ///////////////////////////////////////////////////////////////////////////////
-CRect CRect::operator+( const CRect &addrect )
+CRect CRect::operator+( const CRect& addrect )
 ///////////////////////////////////////////////////////////////////////////////
 {
 	float x1 = _P1.x;
@@ -280,10 +280,10 @@ CRect CRect::operator+( const CRect &addrect )
 void CRect::set( float x1, float y1, float x2, float y2 )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   _P1.x = x1;
-   _P1.y = y1;
-   _P2.x = x2;
-   _P2.y = y2;
+	_P1.x = x1;
+	_P1.y = y1;
+	_P2.x = x2;
+	_P2.y = y2;
 }
 
 
@@ -319,8 +319,8 @@ void CRect::draw( void )
 CCircle::CCircle( float x1, float y1, float radius )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   set( x1, y1, radius );
-   ulCount++;
+	set( x1, y1, radius );
+	ulCount++;
 }
 
 
@@ -332,9 +332,9 @@ CCircle::CCircle( float x1, float y1, float radius )
 CCircle::CCircle( const CPoint& ptP1, float radius )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   _P1 = ptP1;
-   _Radius = radius;
-   ulCount++;
+	_P1 = ptP1;
+	_Radius = radius;
+	ulCount++;
 }
 
 
@@ -346,9 +346,9 @@ CCircle::CCircle( const CPoint& ptP1, float radius )
 CCircle::CCircle( const CCircle& source )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   _P1 = source._P1;
-   _Radius = source._Radius;
-   ulCount++;
+	_P1 = source._P1;
+	_Radius = source._Radius;
+	ulCount++;
 }
 
 
@@ -403,9 +403,9 @@ CCircle CCircle::operator+( const CCircle& addcircle )
 void CCircle::set( float x1, float y1, float radius )
 ///////////////////////////////////////////////////////////////////////////////
 {
-   _P1.x = x1;
-   _P1.y = y1;
-   _Radius = radius;
+	_P1.x = x1;
+	_P1.y = y1;
+	_Radius = radius;
 }
 
 
@@ -431,7 +431,7 @@ void CCircle::draw( void )
 ///////////////////////////////////////////////////////////////////////////////
 {
 	glPushMatrix();
-		glTranslatef((GLfloat)_P1.x, (GLfloat)_P1.y, 0.0);
-		gluDisk(gluNewQuadric(), _Radius, _Radius, 100, 1);
+	glTranslatef((GLfloat)_P1.x, (GLfloat)_P1.y, 0.0);
+	gluDisk(gluNewQuadric(), _Radius, _Radius, 100, 1);
 	glPopMatrix();
 }

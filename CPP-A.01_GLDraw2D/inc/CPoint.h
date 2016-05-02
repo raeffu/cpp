@@ -24,6 +24,7 @@ public:
   ~CPoint();
   void set(float x, float y);
   void list();
+  void draw( void );
   static unsigned long listCount();
 
   CPoint operator+(const CPoint& point);

@@ -33,8 +33,8 @@
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.04_GLDraw2D/src/CmdHandler.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.04_GLDraw2D/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.04_GLDraw2D/inc/Geom.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-A.04_GLDraw2D/inc/Drawing.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.04_GLDraw2D/inc/CmdHandler.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.04_GLDraw2D/inc/Drawing.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.04S_GLDraw2D/src/Drawing.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.04S_GLDraw2D/src/Geom.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.04S_GLDraw2D/src/GLDraw2D.cpp" isTestSource="false" />
@@ -75,16 +75,20 @@
       <sourceFolder url="file://$MODULE_DIR$/CPP-03-D.01_TemplateFunctions/src/point.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-03-D.01_TemplateFunctions/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-03-D.01_TemplateFunctions/inc/point.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CRect.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CPoint.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/Draw.cpp" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CLine.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CmdHandler.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CRect.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/Drawing.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/GLDraw2D.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CCircle.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/src/CLine.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/CMakeLists.txt" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CCircle.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CPoint.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CRect.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CLine.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/Drawing.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CmdHandler.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CPoint.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CCircle.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CPP-A.01_GLDraw2D/inc/CRect.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.04_GlobalInit/src/GlobalInit.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CPP-02-D.04_GlobalInit/CMakeLists.txt" isTestSource="false" />
     </content>

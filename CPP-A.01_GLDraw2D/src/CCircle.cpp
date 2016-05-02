@@ -7,6 +7,9 @@
 #include "../inc/CPoint.h"
 #include "../inc/CCircle.h"
 
+#include <GL/glew.h>
+#include <FL/glut.H>
+
 using namespace std;
 
 unsigned long CCircle::ulCount = 0;
@@ -75,4 +78,12 @@ CCircle CCircle::operator+(const CCircle& circle)
   tmp.center.set(centerX, centerY);
 
   return tmp;
+}
+
+void CCircle::draw()
+{
+  glPushMatrix();
+  glTranslatef((GLfloat)center.x, (GLfloat)center.y, 0.0);
+  gluDisk(gluNewQuadric(), radius, radius, 100, 1);
+  glPopMatrix();
 }

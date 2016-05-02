@@ -46,7 +46,7 @@ public: // functions
 	void set( float x, float y ) { CPoint::x = x; CPoint::y = y; }
 	void list( void );
 	void draw( void );
-	static unsigned long listCount(void ) { cout << "Count of points: " << ulCount << endl; }
+	static void listCount( void ) { cout << "Count of points: " << ulCount << endl; }
 };
 
 
@@ -74,7 +74,7 @@ public: // functions
 	void set( float x1, float y1, float x2, float y2 );
 	void list( void );
 	void draw( void );
-	static unsigned long listCount(void ) { cout << "Count of lines: " << ulCount << endl; }
+	static void listCount( void ) { cout << "Count of lines: " << ulCount << endl; }
 };
 
 
@@ -101,7 +101,7 @@ public: // functions
 	void set( float x1, float y1, float x2, float y2 );
 	void list( void );
 	void draw( void );
-	static unsigned long listCount(void ) { cout << "Count of rectangles: " << ulCount << endl; }
+	static void listCount( void ) { cout << "Count of rectangles: " << ulCount << endl; }
 };
 
 
@@ -128,7 +128,7 @@ public: // functions
 	void set( float x1, float y1, float radius );
 	void list( void );
 	void draw( void );
-	static unsigned long listCount(void ) { cout << "Count of circles: " << ulCount << endl; }
+	static void listCount( void ) { cout << "Count of circles: " << ulCount << endl; }
 };
 
 

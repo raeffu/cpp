@@ -21,6 +21,7 @@ public:
   void set(CPoint c, float r);
   void set(float x, float y, float r);
   void list();
+  void draw(void);
   static unsigned long listCount();
   CCircle operator+(const CCircle& circle);
 };

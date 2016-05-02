@@ -6,6 +6,9 @@
 #include "../inc/CPoint.h"
 #include "../inc/CRect.h"
 
+#include <GL/glew.h>
+#include <FL/glut.H>
+
 using namespace std;
 
 unsigned long CRect::ulCount = 0;
@@ -71,4 +74,9 @@ CRect CRect::operator+(const CRect& rect)
   float y2 = min(bottomRight.y, rect.bottomRight.y);
   tmp.set(x1, y1, x2, y2);
   return tmp;
+}
+
+void CRect::draw()
+{
+  glRectf(topLeft.x, topLeft.y, bottomRight.x, bottomRight.y);
 }
