@@ -73,8 +73,12 @@ CCircle CCircle::operator+(const CCircle& circle)
   tmp.radius = (radius + distance + circle.radius) / 2;
 
   // get new center
-  float centerX = center.x - deltaX;
-  float centerY = center.y - deltaY;
+
+  // shift center of new circle on line between centers of the original circles
+  float offsetX = (deltaX + abs(radius - circle.radius) * (deltaX/distance)) / 2;
+  float offsetY = (deltaY + abs(radius - circle.radius) * (deltaY/distance)) / 2;
+  float centerX = center.x - offsetX;
+  float centerY = center.y - offsetY;
   tmp.center.set(centerX, centerY);
 
   return tmp;

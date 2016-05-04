@@ -13,6 +13,7 @@ history: 1.00 - initial version of OpenGL drawing application
 
 // system includes ////////////////////////////////////////////////////////////
 #include <iostream>
+
 using namespace std;
 
 
@@ -36,169 +37,189 @@ using namespace std;
 //           draw or redraw the window. This happens for instance if the user
 //           draws a new figure or resizes or min/maximizes the window.
 ///////////////////////////////////////////////////////////////////////////////
-void CDrawing::displayDrawing( EViewMode mode )
+void CDrawing::displayDrawing(EViewMode mode)
 ///////////////////////////////////////////////////////////////////////////////
 {
-	// TODO: insert code to draw and list figures
+  // TODO: insert code to draw and list figures
 
-	// write out initial counters
-	cout << "initial object counters ..." << endl << endl;
-	CPoint::listCount();
-	CLine::listCount();
-	CRect::listCount();
-	CCircle::listCount();
-	cout << endl;
 
-	// static objects instantiation
-	CPoint  P1( 1, 2 );
-	CLine   L1( 10, 10, 20, 20 );
-	CRect   R1( 100, 100, 200, 200 );
-	CCircle C1( 400, 400, 60 );
+  // write out initial counters
+  cout << "initial object counters ..." << endl << endl;
+  CPoint::listCount();
+  CLine::listCount();
+  CRect::listCount();
+  CCircle::listCount();
+  cout << endl;
 
-	// dynamic objects instantiation
-	CPoint*  pP2 = new CPoint( CPoint(3, 4 ));
-	CLine*   pL2 = new CLine( CPoint( 30, 30 ), CPoint( 40, 40 ));
-	CRect*   pR2 = new CRect( CPoint( 300, 300 ), CPoint( 400, 400 ));
-	CCircle* pC2 = new CCircle( CPoint( 300, 300 ), 40 );
+  // static objects instantiation
+  CPoint P1(1, 2);
+  CLine L1(10, 10, 20, 20);
+  CRect R1(100, 100, 200, 200);
+  CCircle C1(400, 400, 60);
 
-	// static objects instantiation using copy constructors
-	CPoint  cP1 = P1;
-	CLine   cL1 = L1;
-	CRect   cR1 = R1;
-	CCircle cC1 = C1;
+  // dynamic objects instantiation
+  CPoint* pP2 = new CPoint(CPoint(3, 4));
+  CLine* pL2 = new CLine(CPoint(30, 30), CPoint(40, 40));
+  CRect* pR2 = new CRect(CPoint(300, 300), CPoint(400, 400));
+  CCircle* pC2 = new CCircle(CPoint(300, 300), 40);
 
-	// dynamic objects instantiation using copy constructors
-	CPoint*  pcP2 = new CPoint(*pP2);
-	CLine*   pcL2 = new CLine(*pL2);
-	CRect*   pcR2 = new CRect(*pR2);
-	CCircle* pcC2 = new CCircle(*pC2);
+  // static objects instantiation using copy constructors
+  CPoint cP1 = P1;
+  CLine cL1 = L1;
+  CRect cR1 = R1;
+  CCircle cC1 = C1;
 
-	// call copy constructor only
-	CLine L2 = L1;
-	CRect R2 = R1;
-	CCircle C2 = C1;
+  // dynamic objects instantiation using copy constructors
+  CPoint* pcP2 = new CPoint(*pP2);
+  CLine* pcL2 = new CLine(*pL2);
+  CRect* pcR2 = new CRect(*pR2);
+  CCircle* pcC2 = new CCircle(*pC2);
 
-	// make true assignment
-	L2 = CLine( 10, 10, 200, 20);
+  // call copy constructor only
+  CLine L2 = L1;
+  CRect R2 = R1;
+  CCircle C2 = C1;
 
-	// prepare vector addition
-	CLine L3( 10, 10, 20, 80);
-	CLine L4;
-	CRect R3( 250, 250, 300, 300);
-	CRect R4;
-	CCircle C3( 580, 400, 120);
-	CCircle C4;
+  // make true assignment
+  L2 = CLine(10, 10, 200, 20);
 
-	// add figure objects geometrically
-	L4 = L2 + L3;
-	R4 = R2 + R3;
-	C4 = C2 + C3;
+  // prepare vector addition
+  CLine L3(10, 10, 20, 80);
+  CLine L4;
+  CRect R3(250, 250, 300, 300);
+  CRect R4;
+  CCircle C3(580, 400, 120);
+  CCircle C4;
 
-	// check for viewing mode
-	if ( mode == VIEW_DRAWING )
-	{
-		// TODO: add code here to draw objects
-		P1.draw();
-		L1.draw();
-		R1.draw();
-		C1.draw();
+  // add figure objects geometrically
+  L4 = L2 + L3;
+  R4 = R2 + R3;
+  C4 = C2 + C3;
+  CCircle C51 = CCircle(120, 120, 100);
+  CCircle C52 = CCircle(150, 150, 100);
+  CCircle C5 = C51 + C52;
 
-		pP2->draw();
-		pL2->draw();
-		pR2->draw();
-		pC2->draw();
+  // check for viewing mode
+  if (mode == VIEW_DRAWING)
+  {
+    // TODO: add code here to draw objects
+    P1.draw();
+    L1.draw();
+    R1.draw();
+    C1.draw();
 
-		L2.draw();
-		L3.draw();
-		L4.draw();
+    pP2->draw();
+    pL2->draw();
+    pR2->draw();
+    pC2->draw();
 
-		R2.draw();
-		R3.draw();
-		R4.draw();
+    L2.draw();
+    L3.draw();
+    L4.draw();
 
-		C2.draw();
-		C3.draw();
-		C4.draw();
+    R2.draw();
+    R3.draw();
+    R4.draw();
 
-	}
-	else // VIEW_LISTING
-	{
-		// TODO: add code here to list objects
+    C2.draw();
+    C3.draw();
+    C4.draw();
+    C5.draw();
+    C51.draw();
+    C52.draw();
 
-		// list coordinates of objects
-		cout << "point objects, defined with P1" << endl;
-		P1.list();
-		cP1.list(); cout << endl;
 
-		cout << "point objects, defined with P2" << endl;
-		pP2->list();
-		pcP2->list(); cout << endl;
+  }
+  else // VIEW_LISTING
+  {
+    // TODO: add code here to list objects
 
-		cout << "line objects, defined with P1,P2" << endl;
-		L1.list();
-		cL1.list(); cout << endl;
+    // list coordinates of objects
+    cout << "point objects, defined with P1" << endl;
+    P1.list();
+    cP1.list();
+    cout << endl;
 
-		cout << "line objects, defined with P1,P2" << endl;
-		pL2->list();
-		pcL2->list(); cout << endl;
+    cout << "point objects, defined with P2" << endl;
+    pP2->list();
+    pcP2->list();
+    cout << endl;
 
-		cout << "rectangle objects, defined with P1,P2" << endl;
-		R1.list();
-		cR1.list(); cout << endl;
+    cout << "line objects, defined with P1,P2" << endl;
+    L1.list();
+    cL1.list();
+    cout << endl;
 
-		cout << "rectangle objects, defined with P1,P2" << endl;
-		pR2->list();
-		pcR2->list(); cout << endl;
+    cout << "line objects, defined with P1,P2" << endl;
+    pL2->list();
+    pcL2->list();
+    cout << endl;
 
-		cout << "circle objects, defined with P1, Radius" << endl;
-		C1.list();
-		cC1.list(); cout << endl;
+    cout << "rectangle objects, defined with P1,P2" << endl;
+    R1.list();
+    cR1.list();
+    cout << endl;
 
-		cout << "circle objects, defined with P1, Radius" << endl;
-		pC2->list();
-		pcC2->list(); cout << endl;
+    cout << "rectangle objects, defined with P1,P2" << endl;
+    pR2->list();
+    pcR2->list();
+    cout << endl;
 
-		// list addition results
-		cout << "line addition with L2,L3" << endl;
-		L2.list();
-		L3.list();
-		L4.list(); cout << endl;
+    cout << "circle objects, defined with P1, Radius" << endl;
+    C1.list();
+    cC1.list();
+    cout << endl;
 
-		cout << "rectangle addition with R2,R3" << endl;
-		R2.list();
-		R3.list();
-		R4.list(); cout << endl;
+    cout << "circle objects, defined with P1, Radius" << endl;
+    pC2->list();
+    pcC2->list();
+    cout << endl;
 
-		cout << "circle addition with C2,C3" << endl;
-		C2.list();
-		C3.list();
-		C4.list(); cout << endl;
-	}
+    // list addition results
+    cout << "line addition with L2,L3" << endl;
+    L2.list();
+    L3.list();
+    L4.list();
+    cout << endl;
 
-	// write out counters
-	CPoint::listCount();
-	CLine::listCount();
-	CRect::listCount();
-	CCircle::listCount();
-	cout << endl;
+    cout << "rectangle addition with R2,R3" << endl;
+    R2.list();
+    R3.list();
+    R4.list();
+    cout << endl;
 
-	// explicit destroy of dynamic objects
-	cout << "Deleting dynamic objects ..." << endl << endl;
-	delete pP2;
-	delete pL2;
-	delete pR2;
-	delete pC2;
-	delete pcP2;
-	delete pcL2;
-	delete pcR2;
-	delete pcC2;
+    cout << "circle addition with C2,C3" << endl;
+    C2.list();
+    C3.list();
+    C4.list();
+    cout << endl;
 
-	// write out counters for testing
-	CPoint::listCount();
-	CLine::listCount();
-	CRect::listCount();
-	CCircle::listCount();
-	cout << endl;
+  }
+
+// write out counters
+  CPoint::listCount();
+  CLine::listCount();
+  CRect::listCount();
+  CCircle::listCount();
+  cout << endl;
+
+  // explicit destroy of dynamic objects
+  cout << "Deleting dynamic objects ..." << endl << endl;
+  delete pP2;
+  delete pL2;
+  delete pR2;
+  delete pC2;
+  delete pcP2;
+  delete pcL2;
+  delete pcR2;
+  delete pcC2;
+
+  // write out counters for testing
+  CPoint::listCount();
+  CLine::listCount();
+  CRect::listCount();
+  CCircle::listCount();
+  cout << endl;
 
 }
 // CDrawing::displayDrawing() /////////////////////////////////////////////////
@@ -211,10 +232,10 @@ void CDrawing::displayDrawing( EViewMode mode )
 //           if the user clears the window or opens an existing drawing from
 //           a file.
 ///////////////////////////////////////////////////////////////////////////////
-void CDrawing::clearDrawing( void )
+void CDrawing::clearDrawing(void)
 ///////////////////////////////////////////////////////////////////////////////
 {
-	// TODO: insert code to clear drawing data
+  // TODO: insert code to clear drawing data
 }
 // CDrawing::clearDrawing() ///////////////////////////////////////////////////
 
@@ -230,7 +251,7 @@ void CDrawing::clearDrawing( void )
 void CDrawing::appendFigure(EFigType figtype, const CPoint& p1, const CPoint& p2)
 ///////////////////////////////////////////////////////////////////////////////
 {
-	// TODO: add code to append figure to list
+  // TODO: add code to append figure to list
 }
 // CDrawing::appendFigure() ///////////////////////////////////////////////////
 
@@ -241,10 +262,10 @@ void CDrawing::appendFigure(EFigType figtype, const CPoint& p1, const CPoint& p2
 // purpose:  This function is called, to remove temporary figures while the
 //           user is interactively drawing lines, rectangles or circles.
 ///////////////////////////////////////////////////////////////////////////////
-void CDrawing::removeFigure( void )
+void CDrawing::removeFigure(void)
 ///////////////////////////////////////////////////////////////////////////////
 {
-	// TODO: add code to remove figure from list
+  // TODO: add code to remove figure from list
 }
 // CDrawing::removeFigure() ///////////////////////////////////////////////////
 
@@ -259,7 +280,7 @@ void CDrawing::removeFigure( void )
 void CDrawing::loadDrawingFile(const string& filename)
 ///////////////////////////////////////////////////////////////////////////////
 {
-	// TODO: add drawing file reading code here
+  // TODO: add drawing file reading code here
 }
 // CDrawing::loadDrawingFile() ////////////////////////////////////////////////
 
@@ -274,6 +295,6 @@ void CDrawing::loadDrawingFile(const string& filename)
 void CDrawing::saveDrawingFile(const string& filename)
 ///////////////////////////////////////////////////////////////////////////////
 {
-	// TODO: add drawing file writing code here
+  // TODO: add drawing file writing code here
 }
 // CDrawing::saveDrawingFile() ////////////////////////////////////////////////
