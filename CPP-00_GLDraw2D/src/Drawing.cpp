@@ -42,8 +42,17 @@ void CDrawing::displayDrawing(EViewMode mode)
 {
   // TODO: insert code to draw and list figures
 
+  vector<CPoint*> points;
+  srand((unsigned) time(0));
 
-  // write out initial counters
+  for(int i = 0; i < 400; i++)
+  {
+    float x = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/400));
+    float y = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/400));
+    points.push_back(new CPoint(x, y));
+  }
+
+  /*// write out initial counters
   cout << "initial object counters ..." << endl << endl;
   CPoint::listCount();
   CLine::listCount();
@@ -97,13 +106,21 @@ void CDrawing::displayDrawing(EViewMode mode)
   C4 = C2 + C3;
   CCircle C51 = CCircle(120, 120, 100);
   CCircle C52 = CCircle(150, 150, 100);
-  CCircle C5 = C51 + C52;
+  CCircle C5 = C51 + C52;*/
 
   // check for viewing mode
   if (mode == VIEW_DRAWING)
   {
     // TODO: add code here to draw objects
-    P1.draw();
+
+    vector<CPoint*>::iterator it;
+    for (it = points.begin(); it != points.end(); it++)
+    {
+      (*it)->draw();
+      delete (*it);
+    }
+
+    /*P1.draw();
     L1.draw();
     R1.draw();
     C1.draw();
@@ -126,7 +143,7 @@ void CDrawing::displayDrawing(EViewMode mode)
     C4.draw();
     C5.draw();
     C51.draw();
-    C52.draw();
+    C52.draw();*/
 
 
   }
@@ -134,7 +151,14 @@ void CDrawing::displayDrawing(EViewMode mode)
   {
     // TODO: add code here to list objects
 
-    // list coordinates of objects
+    vector<CPoint*>::iterator it;
+    for (it = points.begin(); it != points.end(); it++)
+    {
+      (*it)->list();
+      delete (*it);
+    }
+
+    /*// list coordinates of objects
     cout << "point objects, defined with P1" << endl;
     P1.list();
     cP1.list();
@@ -192,7 +216,7 @@ void CDrawing::displayDrawing(EViewMode mode)
     C2.list();
     C3.list();
     C4.list();
-    cout << endl;
+    cout << endl;*/
 
   }
 
@@ -203,7 +227,7 @@ void CDrawing::displayDrawing(EViewMode mode)
   CCircle::listCount();
   cout << endl;
 
-  // explicit destroy of dynamic objects
+  /*// explicit destroy of dynamic objects
   cout << "Deleting dynamic objects ..." << endl << endl;
   delete pP2;
   delete pL2;
@@ -219,7 +243,7 @@ void CDrawing::displayDrawing(EViewMode mode)
   CLine::listCount();
   CRect::listCount();
   CCircle::listCount();
-  cout << endl;
+  cout << endl;*/
 
 }
 // CDrawing::displayDrawing() /////////////////////////////////////////////////
